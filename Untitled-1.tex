@@ -1,0 +1,146 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{amsthm,amsmath,amssymb}
+\usepackage{bm}
+\usepackage{mathrsfs}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{pro}{Proposation}[section]
+\newtheorem{theorom}{Theorom}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{cor}{Corollary}[section]
+
+\title{Lecture 5}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{lemma}
+    $ \ $
+    \\(1) if $ \mathfrak{g} $ is aolvable(nilpotent) , then any lie subalgebra and quotient is solvable(nilpotent).
+    \\(2) if $0 \rightarrow  \mathfrak{h} \hookrightarrow \mathfrak{g} \twoheadrightarrow \mathfrak{g}/\mathfrak{h} \to 0$
+    is exact, and $\mathfrak{h}, \mathfrak{g}/\mathfrak{h}$ is solvable, then we have $\mathfrak{g}$ is solvable. 
+    \\ if $0 \rightarrow  Z(\mathfrak{g}) \hookrightarrow \mathfrak{g} \twoheadrightarrow \mathfrak{g}/ Z(\mathfrak{g}) \to 0$
+    is exact, and $ Z(\mathfrak{g})$ is nilpotent, then we have $\mathfrak{g}$ is nilpotent.
+    \\(3) if $\mathfrak{g} \neq 0 $and $\mathfrak{g}$ is nilpotent , then $Z(\mathfrak{g}) \neq 0$ .
+    \\(4)if $\mathfrak{h_1}$ and $\mathfrak{h_2}$ is solvable ideals, then $\mathfrak{h_1}+\mathfrak{h_2}$ is solvable ideals too.
+\end{lemma}
+ $\ $ \\proof of this lemma: \\(1)
+ \\(2)
+ \\(3)
+\\(4) we can construct an exact chain in (2): 
+$$  0 \rightarrow  \frac {\mathfrak{h_1}} {\mathfrak{h_1}\cap\mathfrak{h_2}}  \hookrightarrow \mathfrak{h_1}+\mathfrak{h_2} \twoheadrightarrow  \frac{\mathfrak{h_1}+\mathfrak{h_2} }{\mathfrak{h_1}}  \to 0  $$
+$\frac {\mathfrak{h_1}} {\mathfrak{h_1}\cap\mathfrak{h_2}} $ and  $\frac{\mathfrak{h_1}+\mathfrak{h_2} }{\mathfrak{h_1}}=\mathfrak{h_2}$ are both solvable,
+so we have that $\mathfrak{h_1}+\mathfrak{h_2} $ is solvable. 
+
+\section{Engal's Theorom}
+\begin{theorom}
+    \textbf{Engal's Theorom}
+    \\ Let $\mathfrak{g} \in \mathfrak{gl}(V)$ is a lie algebra ,  such that any element X $\in \mathfrak{g}$ is a nilpotent element
+    , i.e $X^n$ =0 for some  n=$n_{X}$ < $ \infty $,
+    then
+    \\(a) there exist $v \neq 0 \in V$ such that for any X in $ \mathfrak{g} $ , X(v)=0. 
+    \\(b) there exist {$e_1, e_2, \dots e_r $ } such that $\mathfrak{g} \in \mathfrak{n_r} $ with respect to {$e_i$} 
+
+\end{theorom}
+before proof , there are some lemma of this theorom. 
+\begin{lemma}
+    \textbf{ Let $\mathfrak{g} \in \mathfrak{gl}(V)$ is a lie algebra ,  such that any element X $\in \mathfrak{g}$ is a nilpotent element,ad(X) $\in $End( $\mathfrak{gl}$(V) ) is nilpotent}. 
+    \\proof:
+    \\ $ad(X)^m(Y)(v)=\sum_{k=0}^{k=m} \alpha(k)X^kYX^{m-k}(v)$, $\alpha(k) \in \mathbb{Z} $  and because X is nilpotent, we assume that $X^n=0$,then when m>2n,
+    $\alpha(k)X^kYX^{m-k}(v)=0$ for any k, so $ad(X)^m(Y)(v)=0$, and this shows that ad(X) $\in $End( $\mathfrak{gl}$(V) ) is nilpotent.
+\end{lemma}
+
+\begin{lemma}
+    \textbf{ Let $\mathfrak{g} \in \mathfrak{gl}(V)$ is a lie algebra in field k,  such that any element X $\in \mathfrak{g}$ is a nilpotent element,Let $\mathfrak{h}$ $\subset \mathfrak{g}$ is a maximal proper lie subalgebra, then $dim \ \mathfrak{g}/\mathfrak{h}=1 \  and \ \mathfrak{h}$ is an ideal }. 
+    \\proof:
+    because $\mathfrak{g}$ is nilpotent, so is $\mathfrak{g}/\mathfrak{h}$, 
+    and $\mathfrak{g}/\mathfrak{h} \neq 0$ because $\mathfrak{h} $is proper subalgebra  . and let ad( $ \mathfrak{h} $)acts on \ $mathfrak{g}/\mathfrak{h} $,
+    from last lemma, ad($\mathfrak{h}$) is nilpotent, so we can find  $\bar{y_1} \neq 0 $in  $\mathfrak{g}/\mathfrak{h} $such that 
+    $ad(\mathfrak{h})^m$ = 0 and $ad(\mathfrak{h})^{m-1}$ $\neq$ 0, So we let $ad(\mathfrak{h})^{m-1}(y_1)$ = $(\bar{y}),(\bar{y})\neq 0 $and ad$(\mathfrak{h})(\bar{y})$ = 0. 
+    \\Thus we have [X, y] $\in \mathfrak{h} $for any X $\in \mathfrak{h}$. So $[x_1+k_1y, x_2+k_2y] \in  \mathfrak{h}$, Thus we get
+    $\mathfrak{h}\oplus ky$ is another lie algebra and it is strictly larger than $\mathfrak{h} $because $\bar{y} \neq 0$ . So because $\mathfrak{h}$
+     ia maximal. $\mathfrak{h}\oplus ky$ =$\mathfrak{g}.$ and $[X_1, X_2+ky]$ $\in \mathfrak{h}$ tells us that $\mathfrak{h}$ is an ideal. 
+     \\so we finished prove of this lemma.
+\end{lemma}
+$ \  $
+\\ proof of (a) in Engal's Theorom:
+\\we use the way of induction. brcause $\mathfrak{g}$ can be written as $\mathfrak{h}\oplus ky$ =$\mathfrak{g}.$$\mathfrak{h}$ is 
+the maximal proper lie subalgera in $\mathfrak{g}$, and $\mathfrak{h} $can be written as the sum of its maximal proper sub lie algebra
+and a one dimensional subalgebra. (This can finish in the finite step because everthing we researched in this lesson is finite ). 
+\\so we assume (a) is $\exists \  v \neq 0$ , such that X(v) = 0 for any X $\in \mathfrak{h}$.  we need to prove for any X 
+$\in \mathfrak{g}$ , X(v) = 0 too. 
+\\Set W= $\bigcap_{X \in \mathfrak{h}} \ker X.  $  , then for the assume we have dim W $\geq$ 1. 
+We choose any w $\in$ W , then any X $\in \mathfrak{h}$ and y , from the lemmawe know [X, y] $\in \mathfrak{h}$. 
+And [X, y]=Xy-yX, X(w)=0 ,[X, y]= 0, So Xy(w)=0. By arbitary of X, we have y(w) $\in$ W. By arbitary of w, we have $y^n(w)$ $\in$ W for any n $\in \mathbb{Z}$ .
+y is nilpotent so there is m such $y^{m-1}(w) \neq 0 \ and \  y^{m}(w)=0 $.So let $v= y^{m-1} (w)$, we have y(v)=0 and X(v)=0 because  $v= y^{m-1} (w) \in W$. 
+So by induction for finite times, it is trival when $\dim \mathfrak{g}$ = 1. 
+So we proved (a). 
+\\proof of (b) in Engal's Theorom:
+\\we can induction on teh dimension of V. We assume this (b)) right in W whose dimension = dimV-1.  
+Choose v$ \in $V by using (a), let V' = V/kv, and we know that there is $\{v_2', \dots , v_r'\}$ of V' such that $\mathfrak{g} \in \mathfrak{n_{r-1}}$. 
+Choose $v_1=v, v_i=v_i'$ , so $\{v_1, \dots , v_r\}$ in V such that $\mathfrak{g} \in \mathfrak{n_{r}}$. 
+Then when dimV=1 , this is trival. So we proved this . 
+
+\begin{theorom}
+    \textbf{let $\mathfrak{g} \in \mathfrak{gl}(V)$, then $\mathfrak{g}$ is nilpotent $\Leftrightarrow$  any X $\in$ $\mathfrak{g}$ is nilpotent} 
+\end{theorom}
+ 
+
+\section{Lie 's theorom }
+\begin{theorom}
+    \textbf{ Lie's theorom}
+    \\ Let $\mathfrak{g} \in \mathfrak{gl}(V)$, V $= \mathbb{C}^r $, be a solvable lie algebra over $\mathbb{C}$ . Then there 
+    exists 0 $\neq v \in $ V such that for all X$\in \mathfrak{g}$, we have X(v)= $\lambda$(X)v for some$ \lambda  \in \mathbb{C}  $   
+\end{theorom}
+
+\begin{cor}
+    Let g be as above, Then there exists{$e_1, \dots ,e_r$} of V such that$ \mathfrak{g} \subset \mathfrak{b_r}(\mathbb{C}) $ w.r.t {$e_i$, i from 1 to r}. 
+
+\end{cor}
+    proof of this Corollary:
+    \\by induction in the dimension, when dimension is one it is trival. 
+    \\assume it is right when dimension of V is r-1, From Lie's theorom, we can choose a v in the lie's theorom. V'=V/$\mathbb{C}v $ .
+    We can find {$e_2, \dots , e_r$} in V' and let $v=e_1$, {$e_1, \dots , e_r$} is what we want. 
+\begin{pro}[key]
+    Let $\mathfrak{h} \subset \mathfrak{g} $let $\sigma :\mathfrak{g}$ $\rightarrow$ $\mathfrak{gl}(V)$, and $\lambda : \mathfrak{h} \rightarrow \mathbb{C}$ is $\mathbb{C}$-linear. 
+    Set W= {v $\in$ V : $\sigma$(X)(v) = $\lambda$(X)(v) for all X$ \in \mathfrak{h}$  }.If W $\neq \emptyset$ ,then
+    $\sigma$(y)(W) $\subset$ W for any y $\in \mathfrak{g} $
+\end{pro}
+befor proof of this key proposition, we show that $\lambda $([X,y])=0. If $\lambda $([X,y])=0,X $\in \mathfrak{h}$ and y$ \in \mathfrak{g}$. 
+we pick any $ w\neq 0 \in W$, then $(\sigma(X)\sigma(y) )(w) =(\sigma(y)\sigma(X) )(w) +\sigma([X,y])(w)$. Because $\mathfrak{h}$ is an ideal, 
+we have that [X, y] $\in \mathfrak{h}$, so $\sigma([X,y])(w)$=$\lambda([X,y])(w)$=0. 
+So we have that $(\sigma(X)\sigma(y) )(w) =(\sigma(y)\sigma(X) )(w)=$ $(\sigma(X)\sigma(y) )(w) =(\sigma(y)\lambda(X) )(w) $, 
+so  $\sigma$(y)(W) $\subset$ W for any y $\in \mathfrak{g} $. 
+\\ now we begin to prove that $\lambda $[X , y] = 0. 
+ 
+\section{}
+ \begin{definition}
+    $\ $ 
+    \\Any lie algebra has a maximal solvable ideal, we called this ideal as the ralized of $\mathfrak{g}$ ,written as Ral($\mathfrak{g}$)
+
+ \end{definition}
+ \begin{definition}
+    $\ $ 
+    \\ $\mathfrak{g}$ is called semisimple if ral($\mathfrak{g}$) = {0}. 
+    
+ \end{definition}
+ \begin{definition}
+    $\ $ 
+    \\ Let $(\sigma_i , V_i ) $be $\mathfrak{g}$-module (i.e $\sigma_i : \mathfrak{g} \rightarrow  \mathfrak{gl}(V_i)$ ),
+    then $\bigotimes_{i=1}^n$ is $\mathfrak{g}-module$ with action $\sigma$ defined as  $\otimes_{i=1}^n \sigma_i$ given by 
+    $ \sigma(X) (\otimes_{i=1}^n v_i )$ defined as $\sum_{i=1}^n v_i \otimes \dots \sigma_i(v_i) \otimes \cdots v_n $. 
+    \\ And we define if $(\sigma , V ) $be $\mathfrak{g}$-module, then let ($\sigma^*$,$V^* = Hom_k(V, V)$ ) is $\mathfrak{g}$-module,
+    with $\sigma^*(X)(f)(v) = -f(\sigma(X)v)$.
+ \end{definition}
+  \begin{theorom}
+    $ \ $  \\Consider a $\mathbb{C}$ lie algebra $\mathfrak{g}$ , every finite dimension $\mathbb{C}$-representation of $\mathfrak{g}$ has the following form :
+    \\$\lambda \otimes( \sigma  \circ f)$ , 
+    \\ $\lambda: \mathfrak{g} \rightarrow \mathbb{C}=\mathfrak{gl}(\mathbb{C})$. 
+    \\ $\sigma $ is an irreducible representaion of $\mathfrak{g}/Ral(\mathfrak{g})$.
+    \\ f is the quotion map from $\mathfrak{g} $ to  $\mathfrak{g}/Ral(\mathfrak{g})$.
+
+  \end{theorom}
+$ \ $
+The meaning of this theorom is that we only need to care about the classtication of 
+\end{document}
